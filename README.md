@@ -111,17 +111,18 @@ A Bronze coleta os scrobbles de cada usuário via API do Last.fm e salva os dado
 
 ### Etapa Silver
 
-A Silver lê o CSV da Bronze, aplica as transformações e salva em Parquet. Também gera automaticamente um relatório de qualidade com estatísticas descritivas e 6 gráficos.
+A camada Silver consome os dados da Bronze, aplica transformações e persiste os dados em formato Parquet. 
+Além disso, gera automaticamente um relatório de qualidade com estatísticas descritivas e visualizações.
 
 ![Rodando a aplicação: Etapa Silver](docs/images/docker_exec_silver.png)
 
-![Relatório Silver](data/silver/silver_report.md)
+![Relatório Silver](data/silver/silver_report_exemplo.md)
 
 ### Etapa Gold
 
 A Gold lê o Parquet da Silver, cria o Star Schema no PostgreSQL, carrega todas as dimensões, a tabela fato e as métricas de negócio.
 
-![Schema, dimensões e tabela criados](data/silver/docker_exec_gold.png)
+![Schema, dimensões e tabela criados](docs/images/docker_exec_gold.png)
 
 ---
 
@@ -131,33 +132,33 @@ As 5 queries implementadas em `gold.py` respondem às seguintes perguntas:
 
 1. **Ranking geral de artistas**, quais artistas têm mais scrobbles somados no grupo?
 
-![Ranking geral de artistas do grupo](data/silver/gold_metricas_1.png)
+![Ranking geral de artistas do grupo](docs/images/gold_metricas_1.png)
 
 2. **Quem mais escutou**, ranking dos usuários por total de scrobbles
 
-![Quem escutou mais música (por usuário)](data/silver/gold_metricas_2.png)
+![Quem escutou mais música (por usuário)](docs/images/gold_metricas_2.png)
 
 3. **Artista favorito por usuário**, artista mais escutado individualmente por cada membro
 
-![Artista favorito por usuário](data/silver/gold_metricas_3.png)
+![Artista favorito por usuário](docs/images/gold_metricas_3.png)
 
 4. **Hora do dia com mais scrobbles**, em qual horário o grupo mais escuta música?
 
-![Hora do dia com mais scrobbles](data/silver/gold_metricas_4.png)
+![Hora do dia com mais scrobbles](docs/images/gold_metricas_4.png)
 
 5. **Top 10 faixas**, as músicas mais tocadas no histórico completo do grupo
 
-![Top 10 faixas do grupo](data/silver/gold_metricas_5.png)
+![Top 10 faixas do grupo](docs/images/gold_metricas_5.png)
 
 ### Etapa PostgreSQL
 
 Os dados do PostgreSQL podem ser visualizados através do DBeaver:
 
-![Tabelas Postgresql](data/silver/postgresql_tabelas.png)
+![Tabelas Postgresql](docs/images/postgresql_tabelas.png)
 
-![Query](data/silver/postgresql_query.png)
+![Query](docs/images/postgresql_query.png)
 
-![Star Schema](data/silver/postgresql_star_schema.png)
+![Star Schema](docs/images/postgresql_star_schema.png)
 
 ---
 
