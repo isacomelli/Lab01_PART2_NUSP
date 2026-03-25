@@ -53,14 +53,14 @@
 
 ## Gráficos
 
-![g1_scrobbles_por_usuario.png](graphs/g1_scrobbles_por_usuario.png)
+![g1_scrobbles_por_usuario.png](graphs/g1_scrobbles_por_usuario_exemplo.png)
 
-![g2_top10_artistas.png](graphs/g2_top10_artistas.png)
+![g2_top10_artistas.png](graphs/g2_top10_artistas_exemplo.png)
 
-![g3_hora_do_dia.png](graphs/g3_hora_do_dia.png)
+![g3_hora_do_dia.png](graphs/g3_hora_do_dia_exemplo.png)
 
-![g4_dia_da_semana.png](graphs/g4_dia_da_semana.png)
+![g4_dia_da_semana.png](graphs/g4_dia_da_semana_exemplo.png)
 
-![g5_evolucao_mensal.png](graphs/g5_evolucao_mensal.png)
+![g5_evolucao_mensal.png](graphs/g5_evolucao_mensal_exemplo.png)
 
-![g6_outliers_por_usuario.png](graphs/g6_outliers_por_usuario.png)
+![g6_outliers_por_usuario.png](graphs/g6_outliers_por_usuario_exemplo.png)
