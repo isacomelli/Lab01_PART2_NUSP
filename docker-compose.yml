@@ -1,0 +1,28 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: lastfm_postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  app:
+    build: .
+    container_name: lastfm_app
+    depends_on:
+      - postgres
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    environment:
+      POSTGRES_HOST: postgres  # sobrescreve o localhost do .env
+    command: tail -f /dev/null
+
+volumes:
+  pgdata:
