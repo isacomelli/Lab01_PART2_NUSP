@@ -116,7 +116,7 @@ Além disso, gera automaticamente um relatório de qualidade com estatísticas d
 
 ![Rodando a aplicação: Etapa Silver](docs/images/docker_exec_silver.png)
 
-![Relatório Silver](data/silver/silver_report_exemplo.md)
+![Relatório Silver](docs/images/silver_report_exemplo.md)
 
 ### Etapa Gold
 
