@@ -1,0 +1,131 @@
+{
+  "expectations": [
+    {
+      "id": "7084062b-d22b-427d-aaf6-a6ccd9f82ed8",
+      "kwargs": {
+        "column": "name"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "fdc55a99-18a2-430b-ae59-5c1d475d7ae8",
+      "kwargs": {
+        "column": "artist.#text"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "646c37f6-72be-406b-bc09-0090f0e53c5b",
+      "kwargs": {
+        "column": "album.#text"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "f0ed5542-4107-4422-ad76-931282c15a99",
+      "kwargs": {
+        "column": "date.uts"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "71e3cfff-200f-4f81-9d33-7580101b18d6",
+      "kwargs": {
+        "column": "_display_name"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "aa6109b3-d2eb-442c-a863-1614fd8a5624",
+      "kwargs": {
+        "column": "date.uts"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "a2c1ef42-afa8-486d-9f40-5e973b4a1ba3",
+      "kwargs": {
+        "column": "_display_name"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "618bc3f1-d43f-4634-8c3b-0af6b675c80a",
+      "kwargs": {
+        "column": "date.uts",
+        "regex": "^\\d+$"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "17913fe2-001b-4846-86b3-fb9e7a988e93",
+      "kwargs": {
+        "column": "date.#text",
+        "regex": "^\\d{2} \\w{3} \\d{4}, \\d{2}:\\d{2}$"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "18bb0891-40df-4bfc-b5f2-3cd59837efcc",
+      "kwargs": {
+        "column": "date.uts",
+        "max_value": 1774803674.0,
+        "min_value": 1072915200.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "4d2545f3-8602-4c60-a247-1353948b4aa4",
+      "kwargs": {
+        "column": "name"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "fb6ede08-9869-4d33-b641-b07cf1b396c0",
+      "kwargs": {
+        "column": "artist.#text"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "817e60b6-e8aa-45f9-970f-8ccd16c0b9eb",
+      "kwargs": {
+        "min_value": 1000000
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_table_row_count_to_be_between"
+    }
+  ],
+  "id": "228b8931-f0f1-459b-a3c6-2b2aaba2fc21",
+  "meta": {
+    "great_expectations_version": "1.15.1"
+  },
+  "name": "bronze_suite",
+  "notes": null
+}
